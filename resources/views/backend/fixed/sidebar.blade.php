@@ -20,6 +20,12 @@
                     <span>Users</span>
                 </a>
                
+                </li>
+            <li class="">
+                <a class="has-arrow" href="{{url('/category')}}" aria-expanded="false">
+                    <img src="img/menu-icon/3.svg" alt="">
+                    <span>Category</span>
+                </a>
             </li>
             <li class="">
                 <a class="has-arrow" href="{{url('/books')}}" aria-expanded="false">

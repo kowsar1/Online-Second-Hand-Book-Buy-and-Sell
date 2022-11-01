@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('new_payment', function (Blueprint $table) {
-           //table->datatype('column_name',length);
-            // truncated
+        Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('method_name',100);
             $table->string('name',100);
-            $table->text('address')->nullable();
-            $table->string('mobile',20);
-            $table->string('address',200);
-            $table->timestamps(); //created_at, updated_at
+            $table->string('number',20);
+            $table->timestamps();
         });
     }
 
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('new_payment');
+        Schema::dropIfExists('payments');
     }
 };

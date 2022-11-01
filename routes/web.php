@@ -7,6 +7,7 @@ use App\Http\Controllers\Ordercontroller;
 use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\Bookscontroller;
 use App\Http\Controllers\Paymentcontroller;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,10 @@ Route::get('/books',[Bookscontroller::class,'books']);
 Route::get('/order',[Ordercontroller::class,'order']);
 Route::get('/',[Homecontroller::class,'home']);
 Route::get('/payment',[Paymentcontroller::class,'payment']);
+
+Route::get('/category',[CategoryController::class,'category']);
+Route::get('/category/create',[CategoryController::class,'create']);
+Route::post('/category/store',[CategoryController::class,'store']);
 
 
 
