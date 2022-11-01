@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
 use App\Http\Controllers\Aboutcontroller;
-use App\Http\Controllers\Companycontroller;
-use App\Http\Controllers\Applicationcontroller;
-use App\Http\Controllers\Tablecontroller;
+use App\Http\Controllers\Ordercontroller;
+use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\Bookscontroller;
+use App\Http\Controllers\Paymentcontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +20,14 @@ use App\Http\Controllers\Tablecontroller;
 */
 
 Route::get('/about',[Aboutcontroller::class,'about']);
-Route::get('/application',[Applicationcontroller::class,'application']);
-Route::get('/table',[Tablecontroller::class,'table']);
-Route::get('/company',[Companycontroller::class,'company']);
+Route::get('/user',[Usercontroller::class,'user']);
+Route::get('/user/create',[Usercontroller::class,'create']);
+
+
+Route::get('/books',[Bookscontroller::class,'books']);
+Route::get('/order',[Ordercontroller::class,'order']);
 Route::get('/',[Homecontroller::class,'home']);
+Route::get('/payment',[Paymentcontroller::class,'payment']);
 
 
 

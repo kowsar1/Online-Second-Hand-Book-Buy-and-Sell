@@ -15,74 +15,39 @@
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="{{url('/company')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{url('/user')}}" aria-expanded="false">
                     <img src="img/menu-icon/2.svg" alt="">
-                    <span>Company</span>
+                    <span>Users</span>
                 </a>
                
             </li>
             <li class="">
-                <a class="has-arrow" href="{{url('/application')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{url('/books')}}" aria-expanded="false">
                     <img src="img/menu-icon/3.svg" alt="">
-                    <span>Applications</span>
+                    <span>Books</span>
                 </a>
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
+                <a class="has-arrow" href="{{url('/order')}}" aria-expanded="false">
                     <img src="img/menu-icon/4.svg" alt="">
-                    <span>Components</span>
+                    <span>Order</span>
                 </a>
                
             </li>
             <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
+                <a class="has-arrow" href="{{url('/payment')}}" aria-expanded="false">
                     <img src="img/menu-icon/5.svg" alt="">
-                    <span>UI Elements</span>
+                    <span>Payment</span>
                 </a>
                 
-            </li>
-            <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                    <img src="img/menu-icon/6.svg" alt="">
-                    <span>Animations</span>
-                </a>
-               
-            </li>
-            <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                    <img src="img/menu-icon/7.svg" alt="">
-                    <span>Cards</span>
-                </a>
-               
-            </li>
-            <li class="">
-                <a class="has-arrow" href="{{url('/table')}}" aria-expanded="false">
-                    <img src="img/menu-icon/8.svg" alt="">
-                    <span>Table</span>
-                </a>
-               
-            </li>
-            <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                    <img src="img/menu-icon/9.svg" alt="">
-                    <span>Charts</span>
-                </a>
-               
             </li>
             <li class="">
                 <a class="has-arrow" href="{{url('/about')}}" aria-expanded="false">
-                    <img src="img/menu-icon/10.svg" alt="">
+                    <img src="img/menu-icon/5.svg" alt="">
                     <span>About</span>
                 </a>
-               
+                
             </li>
-            <li class="">
-                <a class="has-arrow" href="#" aria-expanded="false">
-                    <img src="img/menu-icon/map.svg" alt="">
-                    <span>Maps</span>
-                </a>
-               
-            </li>
-        </ul>
+            
     </nav>
