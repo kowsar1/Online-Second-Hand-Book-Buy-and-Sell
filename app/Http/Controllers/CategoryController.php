@@ -17,13 +17,6 @@ class CategoryController extends Controller
 
 public function create()
     {
-    
-        
-
-
-
-
-
           return view('backend.page.category.create');
     }
 
@@ -41,6 +34,7 @@ public function create()
             'password'=>$request->password,
             'DOB'=>$request->DOB
        ]);
-       return view('backend.page.category.store');
+       return redirect()->route('category');
+       
     }
 }

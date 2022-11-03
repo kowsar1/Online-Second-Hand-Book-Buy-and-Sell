@@ -30,7 +30,7 @@ Route::get('/order',[Ordercontroller::class,'order']);
 Route::get('/',[Homecontroller::class,'home']);
 Route::get('/payment',[Paymentcontroller::class,'payment']);
 
-Route::get('/category',[CategoryController::class,'category']);
+Route::get('/category',[CategoryController::class,'category'])->name('category');
 Route::get('/category/create',[CategoryController::class,'create']);
 Route::post('/category/store',[CategoryController::class,'store']);
 
