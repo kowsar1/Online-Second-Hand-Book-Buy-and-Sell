@@ -10,13 +10,21 @@ class CategoryController extends Controller
 {
     public function category()
     {
-        return view('backend.page.category.category');
+        $cats=Category::all();
+        //dd($cats);
+             return view('backend.page.category.category',compact('cats'));
     }
 
 public function create()
-
     {
-        return view('backend.page.category.create');
+    
+        
+
+
+
+
+
+          return view('backend.page.category.create');
     }
 
 
