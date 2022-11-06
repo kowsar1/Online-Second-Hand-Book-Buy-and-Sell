@@ -7,10 +7,20 @@
 
 <h1>Create New Category</h1>
 <form action="{{url('/category/store')}}" method="post">
+
+@if($errors->any())
+    @foreach($errors->all() as $show)
+    <p class="alert alert-danger">{{$show}}</p>
+    @endforeach
+@endif
+
+
+
+
 @csrf
 <div>
 <level for= "name ">Enter Category Name: </level>
-<input name="category_name" type="text" class="form-control">
+<input required name="category_name" type="text" class="form-control">
 </div>
 
 

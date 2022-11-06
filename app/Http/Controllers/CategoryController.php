@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function category()
     {
-        $cats=Category::all();
+        $cats=Category::paginate(5);
         //dd($cats);
              return view('backend.page.category.category',compact('cats'));
     }
@@ -27,7 +27,10 @@ public function create()
 
     {
         //dd($request->all());
-
+     $request->validate([
+        'category_name'=>'required|unique:categories,name',
+        'password'=>'required|min:8'
+    ]);
           //database column name => input field name
          Category::create([
             'name'=>$request->category_name,

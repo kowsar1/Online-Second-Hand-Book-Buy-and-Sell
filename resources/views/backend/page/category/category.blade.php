@@ -38,4 +38,6 @@
    @endforeach
   </tbody>
 </table>
+{{$cats->links()}}
+
 @endsection
