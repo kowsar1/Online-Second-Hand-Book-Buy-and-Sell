@@ -1,12 +1,12 @@
 
 
-@extends('master')
+@extends('backend.master')
 
 
 @section('content')
 
 <h1>Create New Category</h1>
-<form action="{{url('/category/store')}}" method="post">
+<form action="{{url('/category/store')}}" method="post" enctype="multipart/form-data">
 
 @if($errors->any())
     @foreach($errors->all() as $show)

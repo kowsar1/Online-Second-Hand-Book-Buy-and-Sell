@@ -1,4 +1,4 @@
-@extends('master')
+@extends('backend.master')
  @section('content')
 
 <h1>New User Create</h1>

@@ -19,20 +19,25 @@ use App\Http\Controllers\CategoryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/login',[Usercontroller::class,'login'])->name('login');
+
+
+
 
 Route::get('/about',[Aboutcontroller::class,'about']);
-Route::get('/user',[Usercontroller::class,'user']);
-Route::get('/user/create',[Usercontroller::class,'create']);
 
+
+Route::get('/',[Homecontroller::class,'home'])->middleware('auth');
 
 Route::get('/books',[Bookscontroller::class,'books']);
 Route::get('/order',[Ordercontroller::class,'order']);
-Route::get('/',[Homecontroller::class,'home']);
 Route::get('/payment',[Paymentcontroller::class,'payment']);
 
 Route::get('/category',[CategoryController::class,'category'])->name('category');
 Route::get('/category/create',[CategoryController::class,'create']);
 Route::post('/category/store',[CategoryController::class,'store']);
+Route::get('/category/delete/{product_id}',[CategoryController::class,'delete'])->name('category.delete');
+Route::get('/category/view/{product_id}',[CategoryController::class,'view'])->name('category.view');
 
 
 
