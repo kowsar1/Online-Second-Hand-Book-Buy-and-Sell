@@ -113,16 +113,16 @@
                                 </li>
                             </div>
                             <div class="profile_info">
-                                <img src="img/client_img.png" alt="#">
+                                <img src="{{url('/upload/2022111730094007.jpg')}}" alt="#">
                                 <div class="profile_info_iner">
                                     <div class="profile_author_name">
                                         <p>Neurologist </p>
-                                        <h5>Dr. Robar Smith</h5>
+                                        <h5>{{auth()->user()->name}} </h5>
                                     </div>
                                     <div class="profile_info_details">
                                         <a href="#">My Profile </a>
                                         <a href="#">Settings</a>
-                                        <a href="#">Log Out </a>
+                                        <a href="{{route('logout')}}">Log Out </a>
                                     </div>
                                 </div>
                             </div>

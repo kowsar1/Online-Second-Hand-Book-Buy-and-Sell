@@ -8,6 +8,7 @@ use App\Http\Controllers\Usercontroller;
 use App\Http\Controllers\Bookscontroller;
 use App\Http\Controllers\Paymentcontroller;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\Frontend\Websitecontroller;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,25 +20,28 @@ use App\Http\Controllers\CategoryController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/login',[Usercontroller::class,'login'])->name('login');
+Route::get('/',[Websitecontroller::class,'web'])->name('webhome');
+
+Route::get('/admin/login',[Usercontroller::class,'login'])->name('login');
+Route::post('/admin/dologin',[Usercontroller::class,'dologin'])->name('do.login');
+
+ 
+Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
+    Route::get('/logout',[UserController::class,'logout'])->name('logout');
+    Route::get('/about',[Aboutcontroller::class,'about']);
+    Route::get('/',[Homecontroller::class,'home'])->name('home');
+    Route::get('/books',[Bookscontroller::class,'books']);
+    Route::get('/order',[Ordercontroller::class,'order']);
+    Route::get('/payment',[Paymentcontroller::class,'payment']);
+    Route::get('/category',[CategoryController::class,'category'])->name('category');
+    Route::get('/category/create',[CategoryController::class,'create']);
+    Route::post('/category/store',[CategoryController::class,'store']);
+    Route::get('/category/delete/{product_id}',[CategoryController::class,'delete'])->name('category.delete');
+    Route::get('/category/view/{product_id}',[CategoryController::class,'view'])->name('category.view');
+});
 
 
 
-
-Route::get('/about',[Aboutcontroller::class,'about']);
-
-
-Route::get('/',[Homecontroller::class,'home'])->middleware('auth');
-
-Route::get('/books',[Bookscontroller::class,'books']);
-Route::get('/order',[Ordercontroller::class,'order']);
-Route::get('/payment',[Paymentcontroller::class,'payment']);
-
-Route::get('/category',[CategoryController::class,'category'])->name('category');
-Route::get('/category/create',[CategoryController::class,'create']);
-Route::post('/category/store',[CategoryController::class,'store']);
-Route::get('/category/delete/{product_id}',[CategoryController::class,'delete'])->name('category.delete');
-Route::get('/category/view/{product_id}',[CategoryController::class,'view'])->name('category.view');
 
 
 

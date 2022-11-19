@@ -79,14 +79,25 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <div class="product-offer mb-30" style="height: 200px;">
-                    <img class="img-fluid" src="{{url('/frontend/img/offer-1.jpg')}}" alt="">
-                    <div class="offer-text">
-                        <h6 class="text-white text-uppercase">Save 20%</h6>
-                        <h3 class="text-white mb-3">Special Offer</h3>
-                        <a href="" class="btn btn-primary">Shop Now</a>
-                    </div>
-                </div>
+                <div class="product-offer mb-30" style="height: 500px;">
+                <div class="shop-cat-box">
+                    
+                           <img class="img-fluid" src="{{url('/upload/2022111730094007.jpg')}}" alt="">
+                          <div class="offer-text">
+                              <h6 class="text-white text-uppercase">Save 20%</h6>
+                              <h3 class="text-white mb-3">Special Offer</h3>
+                              <a href="" class="btn btn-primary">Shop Now</a>
+                            </div>
+                        </div>
+                     </div>
+    <!-- Carousel End 
+
+                     <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="card product-item border-0 mb-4">
+                    <div class="card-header product-img position-relative overflow-hidden bg-transparent border p-0">
+    Featured Start -->
+
+
                
             </div>
         </div>

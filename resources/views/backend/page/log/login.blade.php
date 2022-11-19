@@ -7,6 +7,10 @@
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
+        
+    @if(session()->has('message'))
+            <p class="alert alert-danger">{{session()->get('message')}}</p>
+        @endif
         <!-- Tabs Titles -->
 
         <!-- Icon -->
@@ -14,12 +18,9 @@
             <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes.png" id="icon" alt="User Icon" />
         </div>
 
-        @if(session()->has('message'))
-            <p class="alert alert-danger">{{session()->get('message')}}</p>
-        @endif
 
         <!-- Login Form -->
-        <form action="{{route('login')}}" method="post"> 
+        <form action="{{route('do.login')}}" method="post"> 
             @csrf
             <input type="text" id="login" class="fadeIn second" name="email" placeholder="Enter Email">
             <input type="password" id="password" class=" form-control fadeIn third" name="password" placeholder="Enter Password">
