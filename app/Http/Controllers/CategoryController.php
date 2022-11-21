@@ -47,7 +47,7 @@ class CategoryController extends Controller
         ]);
        
 
-        return redirect()->route('category');
+        return redirect()->route('category')->with('message','Category Created successfully.');
 
 
 
@@ -60,9 +60,9 @@ class CategoryController extends Controller
        if($test)
        {
            $test->delete();
-           return redirect()->back()->with('message','product deleted successfully.');
+           return redirect()->route('category')->with('message','Category deleted successfully.');
        }else{
-           return redirect()->back()->with('error','product not found.');
+           return redirect()->route('category')->with('error','Category not found.');
        }
 }
 public function view($product_id){

@@ -28,14 +28,24 @@ Route::post('/admin/dologin',[Usercontroller::class,'dologin'])->name('do.login'
  
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
-    Route::get('/about',[Aboutcontroller::class,'about']);
+    Route::get('/about',[Aboutcontroller::class,'about'])->name('about');
     Route::get('/',[Homecontroller::class,'home'])->name('home');
-    Route::get('/books',[Bookscontroller::class,'books']);
-    Route::get('/order',[Ordercontroller::class,'order']);
-    Route::get('/payment',[Paymentcontroller::class,'payment']);
+
+    Route::get('/books',[Bookscontroller::class,'list'])->name('book');
+    Route::get('/books/create',[Bookscontroller::class,'create'])->name('book.create');
+    Route::post('/books/list',[Bookscontroller::class,'store'])->name('book.store');
+    Route::get('/books/view/{book_id}',[Bookscontroller::class,'view'])->name('book.view');
+    Route::get('/books/delete/{book_id}',[Bookscontroller::class,'delete'])->name('book.delete');
+    Route::get('/books/edit/{book_id}',[Bookscontroller::class,'edit'])->name('book.edit');
+    Route::put('/books/update/{book_id}',[Bookscontroller::class,'update'])->name('book.update');
+
+
+    Route::get('/order',[Ordercontroller::class,'order'])->name('order');
+    Route::get('/payment',[Paymentcontroller::class,'payment'])->name('payment');
+
     Route::get('/category',[CategoryController::class,'category'])->name('category');
-    Route::get('/category/create',[CategoryController::class,'create']);
-    Route::post('/category/store',[CategoryController::class,'store']);
+    Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
+    Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
     Route::get('/category/delete/{product_id}',[CategoryController::class,'delete'])->name('category.delete');
     Route::get('/category/view/{product_id}',[CategoryController::class,'view'])->name('category.view');
 });

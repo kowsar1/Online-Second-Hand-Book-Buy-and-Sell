@@ -31,7 +31,7 @@
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src={{url('/upload/'.$test->image)}} /></div>
+						  <div class="tab-pane active" id="pic-1"><img src={{url('/uploads/'.$test->image)}} /></div>
 						  
 						</div>
 						
@@ -64,7 +64,7 @@
 							<span class="color blue"></span>
 						</h5>
 						<div class="action">
-							<a href="{{route('category')}}" class="add-to-cart btn btn-default" type="button">Back</a>
+							<a href="{{route('book')}}" class="add-to-cart btn btn-default" type="button" >Back</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

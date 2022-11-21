@@ -13,7 +13,7 @@
     @if(session()->has('error'))
         <p class="alert alert-danger">{{session()->get('error')}}</p>
     @endif
-<a href="{{url('/category/create')}}" class="btn btn-info">Create New User</a>
+<a href="{{route('category.create')}}" class="btn btn-info">Create New User</a>
 <table class="table">
   <thead>
     <tr>
@@ -26,9 +26,9 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($cats as $data)
+    @foreach($cats as $key=>$data)
     <tr>
-      <th scope="row">{{$data->id}}</th>
+      <th scope="row">{{$key+1}}</th>
       <td>{{$data->name}}</td>
       <td>{{$data->password}}</td>
       <td>

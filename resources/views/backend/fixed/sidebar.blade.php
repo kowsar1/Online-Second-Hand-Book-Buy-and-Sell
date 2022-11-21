@@ -1,6 +1,6 @@
 <nav class="sidebar">
         <div class="logo d-flex justify-content-between">
-         <a href="{{url('/')}}"  class="btn btn-info">  <h6>Second hand book </br>Buying and Selling </h6></a>
+         <a href="{{route('home')}}"  class="btn btn-info">  <h6>Second hand book </br>Buying and Selling </h6></a>
             <a href="index.html"><img src="img/logo.png" alt=""></a>
             <div class="sidebar_close_icon d-lg-none">
                 <i class="ti-close"></i>
@@ -8,49 +8,43 @@
         </div>
         <ul id="sidebar_menu">
             <li class="mm-active">
-                <a class="has-arrow" href="{{url('/')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('home')}}" aria-expanded="false">
 
                     <img src="img/menu-icon/dashboard.svg" alt="">
                     <span>Dashboard</span>
                 </a>
                 
             </li>
+            
             <li class="">
-                <a class="has-arrow" href="{{url('/user')}}" aria-expanded="false">
-                    <img src="img/menu-icon/2.svg" alt="">
-                    <span>Users</span>
-                </a>
-               
-                </li>
-            <li class="">
-                <a class="has-arrow" href="{{url('/category')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('category')}}" aria-expanded="false">
                     <img src="img/menu-icon/3.svg" alt="">
                     <span>Category</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="{{url('/books')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('book')}}" aria-expanded="false">
                     <img src="img/menu-icon/3.svg" alt="">
                     <span>Books</span>
                 </a>
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="{{url('/order')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('order')}}" aria-expanded="false">
                     <img src="img/menu-icon/4.svg" alt="">
                     <span>Order</span>
                 </a>
                
             </li>
             <li class="">
-                <a class="has-arrow" href="{{url('/payment')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('payment')}}" aria-expanded="false">
                     <img src="img/menu-icon/5.svg" alt="">
                     <span>Payment</span>
                 </a>
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="{{url('/about')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('about')}}" aria-expanded="false">
                     <img src="img/menu-icon/5.svg" alt="">
                     <span>About</span>
                 </a>

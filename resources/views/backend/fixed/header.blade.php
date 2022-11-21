@@ -9,7 +9,7 @@
                             <div class="search_inner">
                                 <form action="#">
                                     <div class="search_field">
-                                        <input type="text" placeholder="Search here...">
+                                       <h1>Sell your unused book</h1>
                                     </div>
                                     <button type="submit"> <img src="img/icon/icon_search.svg" alt=""> </button>
                                 </form>

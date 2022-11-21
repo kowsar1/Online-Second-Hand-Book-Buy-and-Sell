@@ -6,7 +6,7 @@
 @section('content')
 
 <h1>Create New Category</h1>
-<form action="{{url('/category/store')}}" method="post" enctype="multipart/form-data">
+<form action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
 
 @if($errors->any())
     @foreach($errors->all() as $show)
