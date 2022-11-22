@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class Bookscontroller extends Controller
 {
@@ -94,6 +95,8 @@ class Bookscontroller extends Controller
        $fileName=$book->image;
        if($request->hasFile('image'))
        {
+        $removeimage=public_path().'/uploads/'.$fileName;
+        File::delete($removeimage);
            // generate name
            $fileName=date('Ymdhmi').'.'.$request->file('image')->getClientOriginalExtension();
            $request->file('image')->storeAs('/uploads',$fileName);

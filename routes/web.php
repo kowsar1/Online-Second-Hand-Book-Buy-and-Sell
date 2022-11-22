@@ -22,11 +22,11 @@ use App\Http\Controllers\Frontend\Websitecontroller;
 */
 Route::get('/',[Websitecontroller::class,'web'])->name('webhome');
 
-Route::get('/admin/login',[Usercontroller::class,'login'])->name('login');
-Route::post('/admin/dologin',[Usercontroller::class,'dologin'])->name('do.login');
+Route::get('/kowsar/login',[Usercontroller::class,'login'])->name('login');
+Route::post('/kowsar/dologin',[Usercontroller::class,'dologin'])->name('do.login');
 
  
-Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
+Route::group(['middleware'=>'auth','prefix'=>'kowsar'],function (){
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
     Route::get('/about',[Aboutcontroller::class,'about'])->name('about');
     Route::get('/',[Homecontroller::class,'home'])->name('home');
