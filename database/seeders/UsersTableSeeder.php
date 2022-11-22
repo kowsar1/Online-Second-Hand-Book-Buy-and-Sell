@@ -19,7 +19,7 @@ class UsersTableSeeder extends Seeder
 
             'name'=>'kowsar',
             'email'=>'kowsar@gmail.com',
-            'password'=>bcrypt('12345678')
+            'password'=>bcrypt('1234')
         ]);
     }
 }

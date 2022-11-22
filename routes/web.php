@@ -48,6 +48,8 @@ Route::group(['middleware'=>'auth','prefix'=>'admin'],function (){
     Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
     Route::get('/category/delete/{product_id}',[CategoryController::class,'delete'])->name('category.delete');
     Route::get('/category/view/{product_id}',[CategoryController::class,'view'])->name('category.view');
+    Route::get('/category/edit/{product_id}',[CategoryController::class,'edit'])->name('category.edit');
+    Route::put('/category/update/{product_id}',[CategoryController::class,'update'])->name('category.update');
 });
 
 

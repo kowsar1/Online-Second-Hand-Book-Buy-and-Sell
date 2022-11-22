@@ -100,6 +100,7 @@ class Bookscontroller extends Controller
        }
 
        $book->update([
+        'category_id' => $request->category_id,
         'name' => $request->product_name,
         'image' => $fileName,
         'stock' => $request->product_stock,

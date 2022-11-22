@@ -29,21 +29,16 @@ class CategoryController extends Controller
         //dd($request->all());
         $request->validate([
             'category_name' => 'required|unique:categories,name',
-            'password' => 'required|min:8'
+               
         ]);
 
-        $filename=null;
-        if($request->hasFile('image'))
-    {
-        $filename=date('Ymdthis').'.'.$request->file('image')->getClientOriginalExtension();
-        $request->file('image')->storeAs('/upload',$filename);
-    }
+      
         //database column name => input field name
         Category::create([
             'name' => $request->category_name,
-            'password' => $request->password,
-            'DOB' => $request->DOB,
-            'image'=>$filename
+            'status' => $request->status,
+            'DOB' => $request->DOB
+            
         ]);
        
 
@@ -69,5 +64,29 @@ public function view($product_id){
   
     $test=Category::find($product_id);
   return view('backend.page.category.view',compact('test'));
+}
+public function edit($category_id)
+{
+    $test=Category::find($category_id);
+   
+return view('backend.page.category.edit',compact('test'));
+
+}
+
+public function update(Request $request, $category_id)
+{
+    $test=Category::find($category_id);
+
+
+$test->update([
+
+    'name' => $request->category_name,
+    'status' => $request->status,
+    'DOB' => $request->DOB
+
+]);
+ //dd($test);die;
+ return redirect()->route('category')->with('message','Category Update successfully.');
+
 }
 }

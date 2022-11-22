@@ -18,10 +18,10 @@
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Password</th>
-      <th scope="col">Image</th>
-      <th scope="col">DOB</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Status</th>
+      
+      <th scope="col">Issue Date</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -30,14 +30,12 @@
     <tr>
       <th scope="row">{{$key+1}}</th>
       <td>{{$data->name}}</td>
-      <td>{{$data->password}}</td>
-      <td>
-      <img width="100px" style="border-radius: 10px" src="{{url('/upload/'.$data->image)}}" alt="product_image">
-      </td>
+      <td>{{$data->status}}</td>
+      
       <td>{{$data->DOB}}</td>
       <td>
         <a href="{{route('category.view',$data->id)}}" class="btn btn-primary"> view</a>
-        <a href="" class="btn btn-warning"> Edit</a>
+        <a href="{{route('category.edit',$data->id)}}" class="btn btn-warning"> Edit</a>
         <a href="{{route('category.delete',$data->id)}}" class="btn btn-danger"> Delete</a>
       </td>
 
