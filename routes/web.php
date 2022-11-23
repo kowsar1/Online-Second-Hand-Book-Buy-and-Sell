@@ -21,6 +21,7 @@ use App\Http\Controllers\Frontend\Websitecontroller;
 |
 */
 Route::get('/',[Websitecontroller::class,'web'])->name('webhome');
+route::post('/register',[Websitecontroller::class,'register'])->name('register');
 
 Route::get('/kowsar/login',[Usercontroller::class,'login'])->name('login');
 Route::post('/kowsar/dologin',[Usercontroller::class,'dologin'])->name('do.login');
