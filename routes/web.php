@@ -21,13 +21,20 @@ use App\Http\Controllers\Frontend\Websitecontroller;
 |
 */
 Route::get('/',[Websitecontroller::class,'web'])->name('webhome');
+Route::group(['middleware'=>'auth'],function (){
+
+Route::get('/logout',[Websitecontroller::class,'logout'])->name('user.logout');
+});
 route::post('/register',[Websitecontroller::class,'register'])->name('register');
+route::post('/login',[Websitecontroller::class,'login'])->name('user.login');
 
 Route::get('/kowsar/login',[Usercontroller::class,'login'])->name('login');
 Route::post('/kowsar/dologin',[Usercontroller::class,'dologin'])->name('do.login');
 
  
 Route::group(['middleware'=>'auth','prefix'=>'kowsar'],function (){
+Route::group(['middleware'=>'checkadmin'],function (){
+
     Route::get('/logout',[UserController::class,'logout'])->name('logout');
     Route::get('/about',[Aboutcontroller::class,'about'])->name('about');
     Route::get('/',[Homecontroller::class,'home'])->name('home');
@@ -51,6 +58,7 @@ Route::group(['middleware'=>'auth','prefix'=>'kowsar'],function (){
     Route::get('/category/view/{product_id}',[CategoryController::class,'view'])->name('category.view');
     Route::get('/category/edit/{product_id}',[CategoryController::class,'edit'])->name('category.edit');
     Route::put('/category/update/{product_id}',[CategoryController::class,'update'])->name('category.update');
+});
 });
 
 

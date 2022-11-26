@@ -25,6 +25,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{url('frontend/css/style.css')}}" rel="stylesheet">
+    @notifyCss
 </head>
 
 <body>
@@ -32,7 +33,7 @@
 
  @include('frontend.fixed.header')
     
-
+ @include('notify::components.notify')
 
     <!-- Carousel Start -->
     <div class="container-fluid mb-3">
@@ -272,6 +273,7 @@
 
     <!-- Template Javascript -->
     <script src="{{url('frontend/js/main.js')}}"></script>
+    @notifyJs
 </body>
 
 </html>
