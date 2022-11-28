@@ -15,7 +15,7 @@
                         <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
                         <div class="dropdown-menu dropdown-menu-right">
                          @auth   
-                            <a class="dropdown-item">
+                            <a href="{{route('user.profile')}}" class="dropdown-item">
                                {{-- <img src="" alt="image">--}}
                                {{auth()->user()->name}}
                                  </a>

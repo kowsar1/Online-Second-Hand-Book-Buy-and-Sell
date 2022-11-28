@@ -60,4 +60,13 @@ class Websitecontroller extends Controller
 
         return redirect()->route('webhome');
     }
+
+    public function profile()
+    {
+       
+       
+
+        return view('');
+    }
+    
 }

@@ -23,7 +23,10 @@ use App\Http\Controllers\Frontend\Websitecontroller;
 Route::get('/',[Websitecontroller::class,'web'])->name('webhome');
 Route::group(['middleware'=>'auth'],function (){
 
+
 Route::get('/logout',[Websitecontroller::class,'logout'])->name('user.logout');
+Route::get('/profile',[Websitecontroller::class,'profile'])->name('user.profile');
+
 });
 route::post('/register',[Websitecontroller::class,'register'])->name('register');
 route::post('/login',[Websitecontroller::class,'login'])->name('user.login');

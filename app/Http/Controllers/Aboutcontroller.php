@@ -8,6 +8,6 @@ class Aboutcontroller extends Controller
 {
     public function about()
     {
-        return view('frontend.master');
+        return view('frontend.home');
     }
 }
