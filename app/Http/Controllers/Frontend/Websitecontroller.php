@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
+use App\Models\Book;
 use App\Models\Category;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class Websitecontroller extends Controller
     public function web()
     {
         $data=Category::all();
-        return view('frontend.master',compact('data'));
+        $book=Book::all();
+        return view('frontend.pages.home',compact('data','book'));
     }
     public function register(Request $request)
     {
@@ -22,14 +24,15 @@ class Websitecontroller extends Controller
       'email'=>$request->email,
       'password'=>bcrypt($request->password),
       'mobile'=>$request->mobile,
+      'address'=>$request->address,
       'role'=>'customer'
 
 
 
      ]);
-    
+     notify()->success('Register  successfully');
 
-     return redirect()->back()->with('message','Account create Successfully');
+     return redirect()->back();
 
     }
     public function login(Request $request)
@@ -66,7 +69,27 @@ class Websitecontroller extends Controller
        
        
 
-        return view('');
+        return view('frontend.pages.view');
     }
     
+    public function update(Request $request)
+    {
+        
+
+        $user=User::find(auth()->user()->id);
+        $user->update([
+
+            'name'=>$request->user_name,
+            'mobile'=>$request->user_phone,
+            'address'=>$request->user_address
+        ]);
+        notify()->success('update  successfully');
+        return redirect()->back();
+    }
+    public function search(Request $request)
+    {
+        $searchResult=Book::where('name','LIKE','%'.$request->search_key.'%')->get();
+
+      return view('frontend.pages.search',compact('searchResult'));
+    }
 }

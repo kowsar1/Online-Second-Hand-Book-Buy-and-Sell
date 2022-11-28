@@ -5,10 +5,10 @@
                         <div class="sidebar_icon d-lg-none">
                             <i class="ti-menu"></i>
                         </div>
-                        <div class="serach_field-area">
-                            <div class="search_inner">
+                        <div class="navbar-nav w-100">
+                            <div class="navbar-nav w-100">
                                 <form action="#">
-                                    <div class="search_field">
+                                    <div class="navbar-nav w-100">
                                        <h1>Sell your unused book</h1>
                                     </div>
                                     <button type="submit"> <img src="img/icon/icon_search.svg" alt=""> </button>

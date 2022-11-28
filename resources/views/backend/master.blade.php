@@ -43,8 +43,10 @@
     <link rel="stylesheet" href="https://demo.dashboardpack.com/directory-html/css/colors/default.css" id="colorSkinCSS">
 </head>
 
-<body class="crm_body_bg">
 
+
+<body class="crm_body_bg">
+@notifyCss
 
 
     
@@ -62,6 +64,7 @@
 
     @include('backend.fixed.header')
 
+    @include('notify::components.notify')
 
 
         <div class="main_content_iner ">
@@ -141,6 +144,8 @@
     <script src="https://demo.dashboardpack.com/directory-html/js/custom.js"></script>
     <script src="https://demo.dashboardpack.com/directory-html/vendors/apex_chart/bar_active_1.js"></script>
     <script src="https://demo.dashboardpack.com/directory-html/vendors/apex_chart/apex_chart_list.js"></script>
+    @notifyJs
+
 </body>
 
 </html>

@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
             'email'=>'kowsar2@gmail.com',
             'password'=>bcrypt('1234'),
             'mobile'=>'01973889923',
+            'address'=>'uttara',
             'role'=>'admin'
         ]);
     }

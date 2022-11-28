@@ -53,8 +53,9 @@ class Bookscontroller extends Controller
             'status' => $request->status,
             'description' => $request->description
         ]);
+        notify()->success('Book create  successfully');
 
-        return redirect()->route('book')->with('message','Book Created Successful.');
+        return redirect()->route('book');
 
 
     }
@@ -65,9 +66,11 @@ class Bookscontroller extends Controller
              if($test)
              {
                  $test->delete();
-                 return redirect()->route('book')->with('message','Book deleted successfully.');
+                 notify()->success('Book deleted  successfully');
+                 return redirect()->route('book');
              }else{
-                 return redirect()->route('book')->with('error','Book not found.');
+                notify()->error('Book not found');
+                 return redirect()->route('book');
              }
 
 
@@ -112,8 +115,8 @@ class Bookscontroller extends Controller
         'description'=> $request->description
        ]);
        
-       
-       return redirect()->route('book')->with('message','Update success.');
+       notify()->success('Book update  successfully');
+       return redirect()->route('book');
 
     }
 }

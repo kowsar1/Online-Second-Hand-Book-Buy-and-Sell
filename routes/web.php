@@ -21,11 +21,14 @@ use App\Http\Controllers\Frontend\Websitecontroller;
 |
 */
 Route::get('/',[Websitecontroller::class,'web'])->name('webhome');
+Route::get('/search',[Websitecontroller::class,'search'])->name('book.search');
+
 Route::group(['middleware'=>'auth'],function (){
 
 
 Route::get('/logout',[Websitecontroller::class,'logout'])->name('user.logout');
 Route::get('/profile',[Websitecontroller::class,'profile'])->name('user.profile');
+Route::post('/profile/update',[Websitecontroller::class,'update'])->name('user.update');
 
 });
 route::post('/register',[Websitecontroller::class,'register'])->name('register');
