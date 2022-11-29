@@ -27,8 +27,9 @@ class Admin
         return redirect()->route('webhome');
     }
 }
-if(auth()->user()->role=='admin'){
-    return $next($request);
-}
-//        notify()->error('Your are not admin');
-return redirect()->route('home');
+
+// if(auth()->user()->role=='admin'){
+//     return $next($request);
+// }
+// //        notify()->error('Your are not admin');
+// return redirect()->route('home');

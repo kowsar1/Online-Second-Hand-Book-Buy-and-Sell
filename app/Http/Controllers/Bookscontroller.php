@@ -11,7 +11,7 @@ class Bookscontroller extends Controller
 {
     public function list()
     {
-        $categories=Book::paginate(3);
+        $categories=Book::paginate(5);
 
         return view('backend.page.book.book',compact('categories'));
     }
@@ -39,8 +39,8 @@ class Bookscontroller extends Controller
         if($request->hasFile('image'))
         {
             // generate name
-            $fileName=date('Ymdhmi').'.'.$request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/uploads',$fileName);
+            $fileName=date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads/',$fileName);
         }
 
 
@@ -92,16 +92,20 @@ class Bookscontroller extends Controller
 
     public function update(Request $request,$book_id)
     {
+        
         $book=Book::find($book_id);
         
 
        $fileName=$book->image;
+
        if($request->hasFile('image'))
        {
-        $removeimage=public_path().'/uploads/'.$fileName;
-        File::delete($removeimage);
+    //     $removeimage=public_path().'/uploads/'.$fileName;
+    // //    dd($removeimage);
+
+    //     File::delete($removeimage);
            // generate name
-           $fileName=date('Ymdhmi').'.'.$request->file('image')->getClientOriginalExtension();
+           $fileName=date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
            $request->file('image')->storeAs('/uploads',$fileName);
        }
 

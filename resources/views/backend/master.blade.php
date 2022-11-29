@@ -64,7 +64,6 @@
 
     @include('backend.fixed.header')
 
-    @include('notify::components.notify')
 
 
         <div class="main_content_iner ">

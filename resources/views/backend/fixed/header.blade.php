@@ -16,7 +16,8 @@
                             </div>
                         </div>
                         <div class="header_right d-flex justify-content-between align-items-center">
-                            
+                        @include('notify::components.notify')
+
                             <div class="profile_info">
                                 <img src="{{url('/upload/2022111730094007.jpg')}}" alt="#">
                                 <div class="profile_info_iner">

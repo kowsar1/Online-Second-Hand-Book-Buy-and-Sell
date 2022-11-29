@@ -56,6 +56,8 @@ class Websitecontroller extends Controller
 
     
     }
+
+    
     public function logout()
     {
         Auth::logout();
@@ -64,6 +66,7 @@ class Websitecontroller extends Controller
         return redirect()->route('webhome');
     }
 
+
     public function profile()
     {
        
@@ -71,6 +74,7 @@ class Websitecontroller extends Controller
 
         return view('frontend.pages.view');
     }
+
     
     public function update(Request $request)
     {
@@ -86,9 +90,11 @@ class Websitecontroller extends Controller
         notify()->success('update  successfully');
         return redirect()->back();
     }
+
+
     public function search(Request $request)
     {
-        $searchResult=Book::where('name','LIKE','%'.$request->search_key.'%')->get();
+        $searchResult=Book::where('name','LIKE','%'.$request->Search_key.'%')->get();
 
       return view('frontend.pages.search',compact('searchResult'));
     }
