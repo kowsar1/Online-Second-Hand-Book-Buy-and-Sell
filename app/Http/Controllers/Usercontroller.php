@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -32,5 +33,11 @@ return view('backend.page.log.login');
        Auth::logout();
        
        return redirect()->route('login')->with('message','Logout successful.');
+      }
+      public function view()
+      {
+         $data=User::all();
+         //dd($data->all());
+         return view('backend.page.user-view',compact('data'));
       }
 }

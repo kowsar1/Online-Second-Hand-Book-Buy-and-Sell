@@ -30,16 +30,16 @@
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('order')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('sellpost.view')}}" aria-expanded="false">
                     <img src="img/menu-icon/4.svg" alt="">
-                    <span>Order</span>
+                    <span>Sellpost</span>
                 </a>
                
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('payment')}}" aria-expanded="false">
+                <a class="has-arrow" href="{{route('user.view')}}" aria-expanded="false">
                     <img src="img/menu-icon/5.svg" alt="">
-                    <span>Payment</span>
+                    <span>Users</span>
                 </a>
                 
             </li>

@@ -12,8 +12,8 @@ class Bookscontroller extends Controller
     public function list()
     {
         $categories=Book::paginate(5);
-
-        return view('backend.page.book.book',compact('categories'));
+        // dd($categories->all());
+return view('backend.page.book.book',compact('categories'));
     }
 
     public function create()

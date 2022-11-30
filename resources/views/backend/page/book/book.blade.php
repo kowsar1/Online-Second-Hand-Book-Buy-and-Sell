@@ -22,6 +22,7 @@
             <th scope="col">Name</th>
             <th scope="col">Price</th>
             <th scope="col">Category Name</th>
+            <th scope="col">Description</th>
             <th scope="col">Status</th>
             <th scope="col">Stock</th>
             <th scope="col">Action</th>
@@ -39,6 +40,7 @@
             <td>{{$data->name}}</td>
             <td>{{$data->price}} BDT</td>
             <td>{{$data->category->name}}</td>
+            <td>{{$data->description}}</td>
             <td>{{$data->status}}</td>
             <td>{{$data->stock}}</td>
             <td>

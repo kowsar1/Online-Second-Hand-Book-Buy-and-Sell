@@ -8,8 +8,8 @@
                         <div class="navbar-nav w-100">
                             <div class="navbar-nav w-100">
                                 <form action="#">
-                                    <div class="navbar-nav w-100">
-                                       <h1>Sell your unused book</h1>
+                                    <div class="navbar-nav w-90" >
+                                       <a href="{{route('home')}}" style="padding: 10px ;width: 1000px;  margin: 10px;border: 2px solid powderblue; font-family:'Courier New', Courier, monospace" class="btn btn-success" >Buy and Sell</a>
                                     </div>
                                     <button type="submit"> <img src="img/icon/icon_search.svg" alt=""> </button>
                                 </form>
@@ -19,7 +19,7 @@
                         @include('notify::components.notify')
 
                             <div class="profile_info">
-                                <img src="{{url('/upload/2022111730094007.jpg')}}" alt="#">
+                                <img src="{{url('/uploads/20221129061126.jpg')}}" alt="#">
                                 <div class="profile_info_iner">
                                     <div class="profile_author_name">
                                         <p>Admin </p>

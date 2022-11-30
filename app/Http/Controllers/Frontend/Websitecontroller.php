@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\Sellpost;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,8 +14,9 @@ class Websitecontroller extends Controller
     public function web()
     {
         $data=Category::all();
+        $sell=Sellpost::where('status','active')->get();
         $book=Book::all();
-        return view('frontend.pages.home',compact('data','book'));
+        return view('frontend.pages.home',compact('data','book','sell'));
     }
     public function register(Request $request)
     {
@@ -94,7 +96,8 @@ class Websitecontroller extends Controller
 
     public function search(Request $request)
     {
-        $searchResult=Book::where('name','LIKE','%'.$request->Search_key.'%')->get();
+        $searchResult=Sellpost::where('name','LIKE','%'.$request->Search_key.'%')
+        ->where('status','active')->get();
 
       return view('frontend.pages.search',compact('searchResult'));
     }
