@@ -2,6 +2,7 @@
 
 @section('content')
 
+<h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Books</span></h2>
     <div class="container mt-100">
 
 
@@ -28,7 +29,7 @@
                 </div>
                 @endforeach
             @else
-                <p class="alert alert-danger">No Product Found.</p>
+                <p class="alert alert-danger">No Book Found.</p>
             @endif
         </div>
     </div>

@@ -216,11 +216,13 @@
 
 
 
-            <div class="row">
+             <div class="row">
 
                 @foreach($sell as $cats)
-                <div class="col-md-4 col-sm-6">
-                    <div class="card mb-30">
+                <div class="col-md-4 col-sm-6 ">
+                    <div class="card  mb-30">
+                        <div class="">
+
                         <a class="card-img-tiles" href="#" data-abc="true">
                             <div class="inner">
                                 <div class="main-img">
@@ -234,11 +236,14 @@
                             <h4 class="card-title">{{$cats->description}}</h4>
                             <p class="text-muted">Price: {{$cats->price}}</p><a class="btn btn-outline-primary btn-sm" href="#" data-abc="true">View Products</a>
                         </div>
+                        </div>
                     </div>
                 </div>
                 @endforeach
 
             </div>
+
+        
         </div>
     </div>
     <!-- Offer End -->

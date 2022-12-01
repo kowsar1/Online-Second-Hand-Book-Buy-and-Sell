@@ -38,7 +38,7 @@ class SellpostController extends Controller
             'status' => 'Inactive',
             'description' => $request->description
         ]);
-        notify()->success('Book create  successfully');
+        notify()->success('Book create  successfully, Waiting for Admin ');
 
         return redirect()->route('webhome');
 
