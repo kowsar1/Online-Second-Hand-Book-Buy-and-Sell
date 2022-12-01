@@ -4,16 +4,10 @@
 
 
 @section('content')
-
-<h1>Category List</h1>
-@if(session()->has('message'))
-        <p class="alert alert-success">{{session()->get('message')}}</p>
-      @endif
-
-    @if(session()->has('error'))
-        <p class="alert alert-danger">{{session()->get('error')}}</p>
-    @endif
-<a href="{{route('category.create')}}" class="btn btn-info">Create New User</a>
+<div>
+<h1 class="btn btn-success">Category List</h1>
+</div>
+<a href="{{route('category.create')}}" class="btn btn-info">Create New Category</a>
 <table class="table">
   <thead>
     <tr>

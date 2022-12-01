@@ -4,8 +4,9 @@
 
 
 @section('content')
-
-<h1>Create New Category</h1>
+<div>
+<h1 class="btn btn-primary">Create New Category</h1>
+</div>
 <form action="{{route('category.store')}}" method="post" enctype="multipart/form-data">
 
 @if($errors->any())

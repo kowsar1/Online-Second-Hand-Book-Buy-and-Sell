@@ -13,7 +13,7 @@ class Websitecontroller extends Controller
 {
     public function web()
     {
-        $data=Category::all();
+        $data=Category::where('status','active')->get();
         $sell=Sellpost::where('status','active')->get();
         $book=Book::all();
         return view('frontend.pages.home',compact('data','book','sell'));
@@ -100,5 +100,15 @@ class Websitecontroller extends Controller
         ->where('status','active')->get();
 
       return view('frontend.pages.search',compact('searchResult'));
+    }
+    
+
+    public function category(Request $request,$sell_id)
+    {
+       // dd($sell_id);
+        $searchResult=Sellpost::where('category_id','LIKE','%'.$sell_id.'%')
+        ->where('status','active')->get();
+
+      return view('frontend.pages.category',compact('searchResult'));
     }
 }

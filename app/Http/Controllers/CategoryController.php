@@ -41,6 +41,7 @@ class CategoryController extends Controller
             
         ]);
        
+        notify()->success('Category create successfully');
 
         return redirect()->route('category')->with('message','Category Created successfully.');
 

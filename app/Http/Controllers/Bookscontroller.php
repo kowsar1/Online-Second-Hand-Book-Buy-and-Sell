@@ -94,7 +94,7 @@ return view('backend.page.book.book',compact('categories'));
     {
         
         $book=Book::find($book_id);
-        
+        // dd($book);die;
 
        $fileName=$book->image;
 
