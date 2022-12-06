@@ -21,6 +21,8 @@ return new class extends Migration
             $table->integer('stock')->default(0);
             $table->double('price',10,2)->default(0);
             $table->text('description')->nullable();
+            $table->text('location')->nullable();
+            $table->text('phone')->nullable();
             $table->string('status',10)->default('active');
             $table->timestamps();
         });

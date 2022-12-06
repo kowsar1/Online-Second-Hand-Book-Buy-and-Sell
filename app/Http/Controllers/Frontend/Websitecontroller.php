@@ -103,12 +103,20 @@ class Websitecontroller extends Controller
     }
     
 
-    public function category(Request $request,$sell_id)
+    public function category($sell_id)
     {
        // dd($sell_id);
         $searchResult=Sellpost::where('category_id','LIKE','%'.$sell_id.'%')
         ->where('status','active')->get();
 
       return view('frontend.pages.category',compact('searchResult'));
+    }
+
+    public function view_book($book_id)
+    {
+        $test=Sellpost::find($book_id);
+        // dd($book);
+        return view('frontend.pages.view_book',compact('test'));
+
     }
 }

@@ -24,6 +24,8 @@ use App\Http\Controllers\Frontend\SellpostController;
 
 Route::get('/', [Websitecontroller::class, 'web'])->name('webhome');
 Route::get('/search', [Websitecontroller::class, 'search'])->name('book.search');
+Route::get('/view.book/{book_id}', [Websitecontroller::class, 'view_book'])->name('view.book');
+
 Route::get('/category/book/{sell_id}', [Websitecontroller::class, 'category'])->name('book.category');
 
 Route::group(['middleware' => 'auth'], function () {
@@ -32,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/viewsellpost', [SellpostController::class, 'view'])->name('sellpost.view');
     Route::get('/Rejectsellpost/{sell_id}', [SellpostController::class, 'delete'])->name('sellpost.delete');
     Route::get('/Approved/{sell_id}', [SellpostController::class, 'update'])->name('sellpost.update');
+    Route::get('/hold/{sell_id}', [SellpostController::class, 'hold'])->name('sellpost.hold');
 
 
     Route::get('/logout', [Websitecontroller::class, 'logout'])->name('user.logout');

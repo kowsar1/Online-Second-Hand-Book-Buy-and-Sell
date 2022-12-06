@@ -38,6 +38,7 @@
             <td>
                 <a  href="{{route('sellpost.update',$test->id)}}" class="btn btn-primary">Accept</a>
                 <a href="{{route('sellpost.delete',$test->id)}}" class="btn btn-danger">Reject</a>
+                <a href="{{route('sellpost.hold',$test->id)}}" class="btn btn-danger">Hold</a>
             </td>
         </tr>
         @endforeach

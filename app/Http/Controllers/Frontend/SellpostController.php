@@ -36,9 +36,11 @@ class SellpostController extends Controller
             'stock' => $request->product_stock,
             'price' => $request->product_price,
             'status' => 'Inactive',
-            'description' => $request->description
+            'description' => $request->description,
+            'phone' => $request->phone,
+            'location' => $request->location,
         ]);
-        notify()->success('Book create  successfully, Waiting for Admin ');
+        notify()->success('Book create  successfully, Waiting for Admin Approval');
 
         return redirect()->route('webhome');
 
@@ -50,13 +52,16 @@ class SellpostController extends Controller
         //dd($post->all());
         return view('backend.page.sellpost.view',compact('post'));
     }
-    public function edit($sell_id)
+    public function hold($sell_id)
     {
-        $sell=Sellpost::find($sell_id);
-        $data=Category::all();
+         $sell=Sellpost::find($sell_id);
 
-       //dd($sell);
-       return view('backend.page.sellpost.edit',compact('sell','data'));
+       $sell->update([
+        'status' => 'inactive',
+       ]);
+       
+       notify()->success('post Hold succesfully');
+       return redirect()->route('sellpost.view'); 
     }
     public function update($sell_id)
     {

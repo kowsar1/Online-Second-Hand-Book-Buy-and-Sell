@@ -15,7 +15,7 @@
 
 
                     @foreach($data as $category)
-                    <a  href="{{route('book.category',$category->id)}}" class="nav-item nav-link">{{$category->name}}</a>
+                    <a  href="{{route('book.category',$category->id)}}"  class="btn btn-outline-warning" class="nav-item nav-link" class="display-4">{{$category->name}}</a>
                     @endforeach
                 </div>
             </nav>
@@ -31,17 +31,10 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
-                        <a href="#" class="nav-item nav-link active">Home</a>
-                        <a href="#" class="nav-item nav-link">Shop</a>
-                        <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down mt-1"></i></a>
-                            <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                                <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                <a href="checkout.html" class="dropdown-item">Checkout</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="{{route('webhome')}}" class="nav-item nav-link active">Home</a>
+                        <a href="#Book" class="nav-item nav-link">Shop</a>
+                        
+                        <a href="#" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                         <a href="" class="btn px-0">
@@ -110,8 +103,7 @@
 
 
                     <div class="offer-text">
-
-                        <a href="" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Post Your Book</a>
+                        <a href=""class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"> <big> Post Your Book</big></a>
                     </div>
                 </div>
             </div>
@@ -141,6 +133,17 @@
                                     <label for="price">Enter Product Price</label>
                                     <input required name="product_price" type="number" class="form-control" id="price" placeholder="Enter Product Price">
                                 </div>
+                                
+                                <div class="form-group">
+                                    <label for="price">Enter Phone number</label>
+                                    <input required name="phone" type="number" class="form-control" id="price" placeholder="Enter phone number">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="price">Enter your location</label>
+                                    <input required name="location" type="text" class="form-control" id="price" placeholder="Enter your location">
+                                </div>
+
                                 <div class="form-group">
                                     <label for="stock">Enter Product Stock</label>
                                     <input required name="product_stock" type="number" class="form-control" id="price" placeholder="Enter Product Stock">
@@ -190,7 +193,7 @@
 <!-- Carousel End -->
 
 
-<!-- Featured Start -->
+<!-- Featured Start 
 <div class="container-fluid pt-5">
     <div class="row px-xl-5 pb-3">
         <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
@@ -201,14 +204,14 @@
         </div>
 
     </div>
-    <!-- Featured End -->
+    -- Featured End -->
 
 
     
 
     <!-- Offer Start -->
 
-    <div class="container-fluid pt-5 pb-3">
+    <div id="Book" class="container-fluid pt-5 pb-3">
 
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Books</span></h2>
         <div class="container mt-100">
@@ -234,7 +237,7 @@
                         <div class="card-body text-center">
                             <h4 class="card-title">{{$cats->name}}</h4>
                             <h4 class="card-title">{{$cats->description}}</h4>
-                            <p class="text-muted">Price: {{$cats->price}}</p><a class="btn btn-outline-primary btn-sm" href="#" data-abc="true">View Products</a>
+                            <p class="text-muted">Price: {{$cats->price}}</p><a class="btn btn-outline-primary btn-sm" href=" {{route('view.book',$cats->id)}}" data-abc="true">View Products</a>
                         </div>
                         </div>
                     </div>
