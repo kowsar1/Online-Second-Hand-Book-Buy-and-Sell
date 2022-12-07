@@ -27,22 +27,23 @@ Route::get('/search', [Websitecontroller::class, 'search'])->name('book.search')
 Route::get('/view.book/{book_id}', [Websitecontroller::class, 'view_book'])->name('view.book');
 
 Route::get('/category/book/{sell_id}', [Websitecontroller::class, 'category'])->name('book.category');
+route::post('/register', [Websitecontroller::class, 'register'])->name('register');
+route::post('/login', [Websitecontroller::class, 'login'])->name('user.login');
 
 Route::group(['middleware' => 'auth'], function () {
 
+    
+    
+    Route::get('/logout', [Websitecontroller::class, 'logout'])->name('user.logout');
+    Route::get('/profile', [Websitecontroller::class, 'profile'])->name('user.profile');
+    Route::post('/profile/update', [Websitecontroller::class, 'update'])->name('user.update');
+    
     Route::post('/sellpost', [SellpostController::class, 'create'])->name('sellpost.create');
     Route::get('/viewsellpost', [SellpostController::class, 'view'])->name('sellpost.view');
     Route::get('/Rejectsellpost/{sell_id}', [SellpostController::class, 'delete'])->name('sellpost.delete');
     Route::get('/Approved/{sell_id}', [SellpostController::class, 'update'])->name('sellpost.update');
     Route::get('/hold/{sell_id}', [SellpostController::class, 'hold'])->name('sellpost.hold');
-
-
-    Route::get('/logout', [Websitecontroller::class, 'logout'])->name('user.logout');
-    Route::get('/profile', [Websitecontroller::class, 'profile'])->name('user.profile');
-    Route::post('/profile/update', [Websitecontroller::class, 'update'])->name('user.update');
 });
-route::post('/register', [Websitecontroller::class, 'register'])->name('register');
-route::post('/login', [Websitecontroller::class, 'login'])->name('user.login');
 
 Route::get('/kowsar/login', [Usercontroller::class, 'login'])->name('login');
 Route::post('/kowsar/dologin', [Usercontroller::class, 'dologin'])->name('do.login');

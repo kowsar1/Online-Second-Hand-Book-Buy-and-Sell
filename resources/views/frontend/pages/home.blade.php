@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav mr-auto py-0">
                         <a href="{{route('webhome')}}" class="nav-item nav-link active">Home</a>
-                        <a href="#Book" class="nav-item nav-link">Shop</a>
+                        <a href="#Book" class="nav-item nav-link">Book</a>
                         
                         <a href="#" class="nav-item nav-link">Contact</a>
                     </div>
@@ -65,32 +65,32 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item position-relative active" style="height: 700px;">
-                        <img class="position-absolute w-100 h-100" src="{{url('/upload/2022112130045318.jpg')}}" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="{{url('/upload/IMG_4868.jpg')}}" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Men Fashion</h1>
+                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Read Book</h1>
                                 <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+                                <!-- <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item position-relative" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
+                    <div class="carousel-item position-relative" style="min-width: 300px ;min-height: 700px;" >
+                        <img  class="position-absolute w-100 h-100"  src="{{url('/upload/buybooks.jpg')}}" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Women Fashion</h1>
+                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Buy from here</h1>
                                 <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+                                <!-- <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item position-relative" style="height: 430px;">
-                        <img class="position-absolute w-100 h-100" src="img/carousel-3.jpg" style="object-fit: cover;">
+                    <div class="carousel-item position-relative" style="height: 700px; min-width: 700px">
+                        <img class="position-absolute w-100 h-100" src="{{url('/upload/sell.jpg')}}" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
-                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Kids Fashion</h1>
+                                <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Sell here</h1>
                                 <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
-                                <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a>
+                                <!-- <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a> -->
                             </div>
                         </div>
                     </div>
@@ -101,6 +101,7 @@
             <div class="product-offer mb-30" style="height: 500px;">
                 <div class="shop-cat-box">
 
+                <img class="position-absolute w-100 h-100" src="{{url('/upload/image.jpg')}}" style="object-fit: cover;">
 
                     <div class="offer-text">
                         <a href=""class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"> <big> Post Your Book</big></a>

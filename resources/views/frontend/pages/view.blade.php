@@ -14,21 +14,26 @@
                   <form action="{{route('user.update')}}" method="post">
                     @csrf
                 <div class="row mt-2">
-                    <div class="col-md-12"><label class="labels">Name</label><input name="user_name" type="text" class="form-control" placeholder="first name" value="{{auth()->user()->name}}">
+                    <div class="col-md-12"><label class="labels">Name</label>
+                    <input name="user_name" type="text" class="form-control" placeholder="first name" value="{{auth()->user()->name}}">
                     </div>
 
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-12"><label class="labels">Mobile Number</label><input name="user_phone" type="text" class="form-control" placeholder="enter phone number" value="{{auth()->user()->mobile}}">
+                    <div class="col-md-12"><label class="labels">Mobile Number</label>
+                    <input name="user_phone" type="text" class="form-control" placeholder="enter phone number" value="{{auth()->user()->mobile}}">
                     </div>
-                    <div class="col-md-12"><label class="labels">Address </label><input name="user_address" type="text" class="form-control" placeholder="enter address" value="{{auth()->user()->address}}">
+                    <div class="col-md-12"><label class="labels">Address </label>
+                    <input name="user_address" type="text" class="form-control" placeholder="enter address" value="{{auth()->user()->address}}">
                     </div>
 
-                    <div class="col-md-12"><label class="labels">Email ID</label><input name="user_email" readonly type="text" class="form-control" placeholder="enter email id" value="{{auth()->user()->email}}">
+                    <div class="col-md-12"><label class="labels">Email ID</label>
+                    <input name="user_email" readonly type="text" class="form-control" placeholder="enter email id" value="{{auth()->user()->email}}">
                     </div>
                 </div>
 
-                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="submit">Update Profile</button></div>
+                <div class="mt-5 text-center">
+                    <button class="btn btn-primary profile-button" type="submit">Update Profile</button></div>
                 </form>
             </div>
         </div>
