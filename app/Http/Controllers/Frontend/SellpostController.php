@@ -32,6 +32,7 @@ class SellpostController extends Controller
         Sellpost::create([
             'category_id' => $request->category_id,
             'name' => $request->product_name,
+            'user_id' => auth()->user()->id,
             'image' => $fileName,
             'stock' => $request->product_stock,
             'price' => $request->product_price,
@@ -89,6 +90,16 @@ class SellpostController extends Controller
                  return redirect()->route('sellpost.view');
              }
     
+            }
+            public function sell_book($id)
+            {
+                $sell = Sellpost::where('id',$id)->first();
+                $sell->update([
+                    'stock' =>$sell->stock-1,
+                    'sold' =>'yes',
+                    'decressed_stock'=> $sell->decressed_stock +1
+                ]);
+                return back();
             }
         }
     

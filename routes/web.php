@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/Rejectsellpost/{sell_id}', [SellpostController::class, 'delete'])->name('sellpost.delete');
     Route::get('/Approved/{sell_id}', [SellpostController::class, 'update'])->name('sellpost.update');
     Route::get('/hold/{sell_id}', [SellpostController::class, 'hold'])->name('sellpost.hold');
+    Route::get('/Sell-book/{sell_id}', [SellpostController::class, 'sell_book'])->name('sell.book');
 });
 
 Route::get('/kowsar/login', [Usercontroller::class, 'login'])->name('login');

@@ -35,6 +35,7 @@
 						  <div class="action">
 							<a href="{{route('webhome')}}" class="add-to-cart btn btn-default" type="button" >Back</a>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+
 						</div>
 						</div>
 						
@@ -44,11 +45,26 @@
 						<h3 class="product-title">{{$test->name}}</h3>
 						
 						<div >
-							<p>	Price: {{$test->price}}BDT</p>
-							<p>Owner Number: {{$test->phone}}</p>
-							<p>Owner Location: {{$test->location}}</p>
-								
+							<div class="mt-5">
+							<p class="like btn btn-default">	Price: {{$test->price}}BDT</p>
+						    </div>
+							<div class="mt-5">
+							<p class="like btn btn-default">Owner Number: {{$test->phone}}</p>
 							</div>
+							<div class="mt-5">
+							<p class="like btn btn-default">Owner Location: {{$test->location}}</p>
+							</div>
+							<div class="mt-5">
+							<p class=" btn btn-success">	Sold Books: {{$test->decressed_stock}}</p>
+							</div>
+							@if($test->stock==0)
+							<div class="mt-5">
+							<p class=" btn btn-success">	Stock Empty</p>
+							</div>
+							@endif
+							
+
+						</div>
 						
 						
 					</div>

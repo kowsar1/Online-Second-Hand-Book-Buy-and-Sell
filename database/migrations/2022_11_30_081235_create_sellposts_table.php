@@ -17,12 +17,15 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained('categories');
             $table->string('name',100);
+            $table->string('user_id',100);
             $table->string('image')->nullable();
             $table->integer('stock')->default(0);
             $table->double('price',10,2)->default(0);
             $table->text('description')->nullable();
             $table->text('location')->nullable();
             $table->text('phone')->nullable();
+            $table->text('sold')->nullable();
+            $table->text('decressed_stock')->nullable();
             $table->string('status',10)->default('active');
             $table->timestamps();
         });

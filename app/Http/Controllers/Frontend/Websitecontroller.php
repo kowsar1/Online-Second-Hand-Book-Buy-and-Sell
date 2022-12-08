@@ -72,9 +72,9 @@ class Websitecontroller extends Controller
     public function profile()
     {
        
-       
+       $sellpost = Sellpost::where('user_id',auth()->user()->id)->get();
 
-        return view('frontend.pages.view');
+        return view('frontend.pages.view',compact('sellpost'));
     }
 
     
