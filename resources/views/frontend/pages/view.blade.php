@@ -72,12 +72,17 @@
                 <td>{{$sell->category->name}}</td>
                 <td>{{$sell->decressed_stock}}</td>
                 <td>
-                    
+
                     <img width="100px" style="border-radius: 10px" src="{{url('/uploads/'.$sell->image)}}" alt="product_image">
                 </td>
                 <td>
-                    <a href="{{route('sell.book',$sell->id)}}" class="btn btn-primary">Sell</a>
+                    @if($sell->stock==0)
+                              <p>Out of Stock</p>
+                    @else
+                    <div class="mt-5">
+                        <a href="{{route('sell.book',$sell->id)}}" class="btn btn-primary">Sell</a>
                 </td>
+                @endif
 
                 @endforeach
             </tr>

@@ -54,12 +54,13 @@
 							<div class="mt-5">
 							<p class="like btn btn-default">Owner Location: {{$test->location}}</p>
 							</div>
-							<div class="mt-5">
-							<p class=" btn btn-success">	Sold Books: {{$test->decressed_stock}}</p>
-							</div>
+							
 							@if($test->stock==0)
 							<div class="mt-5">
 							<p class=" btn btn-success">	Stock Empty</p>
+							</div>
+							@else<div class="mt-5">
+							<p class=" btn btn-success">	Sold Books: {{$test->decressed_stock}}</p>
 							</div>
 							@endif
 							
