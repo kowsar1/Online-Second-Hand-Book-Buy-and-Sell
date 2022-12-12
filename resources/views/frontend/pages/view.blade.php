@@ -60,9 +60,9 @@
             </tr>
         </thead>
         <tbody>
+            @foreach($sellpost as $sell)
             <tr>
-                @foreach($sellpost as $sell)
-                <th scope="row">1</th>
+                <th scope="row">{{$sell->id}}</th>
                 <td>{{$sell->name}}</td>
                 <td>{{$sell->price}}</td>
                 <td>{{$sell->stock}}</td>
@@ -81,11 +81,11 @@
                     @else
                     <div class="mt-5">
                         <a href="{{route('sell.book',$sell->id)}}" class="btn btn-primary">Sell</a>
+                        @endif
                 </td>
-                @endif
 
-                @endforeach
             </tr>
+            @endforeach
 
         </tbody>
     </table>

@@ -7,48 +7,55 @@
             </div>
         </div>
         <ul id="sidebar_menu">
-            <li class="mm-active">
-                <a class="has-arrow" href="{{route('home')}}" aria-expanded="false">
+            <li class="">
+                <a  href="{{route('home')}}" aria-expanded="false">
 
-                    <img src="img/menu-icon/dashboard.svg" alt="">
+                    <img src="{{url('/upload/z.png')}}" alt="image">
                     <span>Dashboard</span>
                 </a>
                 
             </li>
             
             <li class="">
-                <a class="has-arrow" href="{{route('category')}}" aria-expanded="false">
-                    <img src="img/menu-icon/3.svg" alt="">
+                <a  href="{{route('category')}}" aria-expanded="false">
+                    <img src="{{url('/upload/category.png')}}" alt="">
                     <span>Category</span>
                 </a>
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('book')}}" aria-expanded="false">
-                    <img src="img/menu-icon/3.svg" alt="">
+                <a  href="{{route('book')}}" aria-expanded="false">
+                    <img src="{{url('/upload/book.png')}}" alt="">
                     <span>Books</span>
                 </a>
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('sellpost.view')}}" aria-expanded="false">
-                    <img src="img/menu-icon/4.svg" alt="">
+                <a  href="{{route('sellpost.view')}}" aria-expanded="false">
+                    <img src="{{url('/upload/post.jpg')}}" alt="">
                     <span>Sellpost</span>
                 </a>
                
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('user.view')}}" aria-expanded="false">
-                    <img src="img/menu-icon/5.svg" alt="">
+                <a  href="{{route('user.view')}}" aria-expanded="false">
+                    <img src="{{url('/upload/user.png')}}" alt="">
                     <span>Users</span>
                 </a>
                 
             </li>
             <li class="">
-                <a class="has-arrow" href="{{route('about')}}" aria-expanded="false">
+                <a  href="{{route('about')}}" aria-expanded="false">
                     <img src="img/menu-icon/5.svg" alt="">
                     <span>About</span>
                 </a>
                 
             </li>
             
+            <li class="">
+                <a  href="{{route('report')}}" aria-expanded="false">
+                    <img src="img/menu-icon/5.svg" alt="">
+                    <span>Report</span>
+                </a>
+                
+            </li>
     </nav>

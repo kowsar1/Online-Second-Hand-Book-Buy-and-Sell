@@ -91,7 +91,9 @@
                </div>
                <div class="form-group">
                  <label for="exampleInputEmail1">Enter Phone Number</label>
-                 <input name="mobile" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Phone Number">
+                 <input required name="mobile" type="text" class="form-control" id="exampleInputEmail1" value="+880" placeholder="Enter Phone Number">
+                 <p class="text-danger"> @error('mobile') {{$message}} @enderror</p>
+
 
                </div>
                <div class="form-group">

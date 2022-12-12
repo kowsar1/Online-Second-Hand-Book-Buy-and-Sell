@@ -46,7 +46,7 @@
 						
 						<div >
 							<div class="mt-5">
-							<p class="like btn btn-default">	Price: {{$test->price}}BDT</p>
+							<p class="like btn btn-default">Price: {{$test->price}}BDT</p>
 						    </div>
 							<div class="mt-5">
 							<p class="like btn btn-default">Owner Number: {{$test->phone}}</p>
@@ -57,7 +57,7 @@
 							
 							@if($test->stock==0)
 							<div class="mt-5">
-							<p class=" btn btn-success">	Stock Empty</p>
+							<p class=" btn btn-success">Stock Empty</p>
 							</div>
 							@else<div class="mt-5">
 							<p class=" btn btn-success">	Sold Books: {{$test->decressed_stock}}</p>

@@ -14,12 +14,17 @@ class Websitecontroller extends Controller
     public function web()
     {
         $data=Category::where('status','active')->get();
-        $sell=Sellpost::where('status','active')->get();
+        $sell=Sellpost::where('status','active')->where('stock','>',0)->get();
         $book=Book::all();
         return view('frontend.pages.home',compact('data','book','sell'));
     }
     public function register(Request $request)
     {
+        $request->validate([
+
+            'mobile'=>'regex:/^\\+?[1-9][0-9]{7,14}$/'
+
+        ]);
      User::create([
 
       'name'=>$request->name,
@@ -29,6 +34,10 @@ class Websitecontroller extends Controller
       'address'=>$request->address,
       'role'=>'customer'
 
+    //   if(mobile!='mobile')
+    //   {
+
+    //   }
 
 
      ]);

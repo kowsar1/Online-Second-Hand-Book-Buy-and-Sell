@@ -15,7 +15,7 @@
 
 
                     @foreach($data as $category)
-                    <a  href="{{route('book.category',$category->id)}}"  class="btn btn-outline-warning" class="nav-item nav-link" class="display-4">{{$category->name}}</a>
+                    <a href="{{route('book.category',$category->id)}}" class="btn btn-outline-warning" class="nav-item nav-link" class="display-4">{{$category->name}}</a>
                     @endforeach
                 </div>
             </nav>
@@ -33,7 +33,7 @@
                     <div class="navbar-nav mr-auto py-0">
                         <a href="{{route('webhome')}}" class="nav-item nav-link active">Home</a>
                         <a href="#Book" class="nav-item nav-link">Book</a>
-                        
+
                         <a href="#" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
@@ -74,8 +74,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item position-relative" style="min-width: 300px ;min-height: 700px;" >
-                        <img  class="position-absolute w-100 h-100"  src="{{url('/upload/buybooks.jpg')}}" style="object-fit: cover;">
+                    <div class="carousel-item position-relative" style="min-width: 300px ;min-height: 700px;">
+                        <img class="position-absolute w-100 h-100" src="{{url('/upload/buybooks.jpg')}}" style="object-fit: cover;">
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Buy from here</h1>
@@ -101,10 +101,10 @@
             <div class="product-offer mb-30" style="height: 500px;">
                 <div class="shop-cat-box">
 
-                <img class="position-absolute w-100 h-100" src="{{url('/upload/image.jpg')}}" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100" src="{{url('/upload/image.jpg')}}" style="object-fit: cover;">
 
                     <div class="offer-text">
-                        <a href=""class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"> <big> Post Your Book</big></a>
+                        <a href="" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"> <big> Post Your Book</big></a>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Post here</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -134,12 +134,15 @@
                                     <label for="price">Enter Product Price</label>
                                     <input required name="product_price" type="number" class="form-control" id="price" placeholder="Enter Product Price">
                                 </div>
-                                
+
                                 <div class="form-group">
-                                    <label for="price">Enter Phone number</label>
-                                    <input required name="phone" type="number" class="form-control" id="price" placeholder="Enter phone number">
+                                    <label for="exampleInputEmail1">Enter Phone Number</label>
+                                    <input required name="phone" type="text" class="form-control" id="exampleInputEmail1" value="+880" placeholder="Enter Phone Number">
+                                    <p class="text-danger"> @error('Enter Phone number with country code') {{$message}} @enderror</p>
+
+
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label for="price">Enter your location</label>
                                     <input required name="location" type="text" class="form-control" id="price" placeholder="Enter your location">
@@ -175,7 +178,7 @@
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -208,24 +211,24 @@
     -- Featured End -->
 
 
-    
-
-    <!-- Offer Start -->
-
-    <div id="Book" class="container-fluid pt-5 pb-3">
-
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Books</span></h2>
-        <div class="container mt-100">
 
 
+<!-- Offer Start -->
+
+<div id="Book" class="container-fluid pt-5 pb-3">
+
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Books</span></h2>
+    <div class="container mt-100">
 
 
-             <div class="row">
 
-                @foreach($sell as $cats)
-                <div class="col-md-4 col-sm-6 ">
-                    <div class="card  mb-30">
-                        <div class="">
+
+        <div class="row">
+
+            @foreach($sell as $cats)
+            <div class="col-md-4 col-sm-6 ">
+                <div class="card  mb-30">
+                    <div class="">
 
                         <a class="card-img-tiles" href="#" data-abc="true">
                             <div class="inner">
@@ -240,20 +243,20 @@
                             <h4 class="card-title">{{$cats->description}}</h4>
                             <p class="text-muted">Price: {{$cats->price}}</p><a class="btn btn-outline-primary btn-sm" href=" {{route('view.book',$cats->id)}}" data-abc="true">View Products</a>
                         </div>
-                        </div>
                     </div>
                 </div>
-                @endforeach
-
             </div>
+            @endforeach
 
-        
         </div>
+
+
     </div>
-    <!-- Offer End -->
+</div>
+<!-- Offer End -->
 
 
-    <!-- Products Start 
+<!-- Products Start 
     <div class="container-fluid pt-5 pb-3">
 
         <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Books</span></h2>
@@ -288,11 +291,11 @@
     </div>
 -->
 
-    <!-- Products End -->
+<!-- Products End -->
 
 
 
-    <!-- Vendor Start 
+<!-- Vendor Start 
     <div class="container-fluid py-5">
         <div class="row px-xl-5">
             <div class="col">
@@ -309,5 +312,5 @@
 
 
 
-    <!-- Back to Top -->
-    @endsection
+<!-- Back to Top -->
+@endsection

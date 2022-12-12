@@ -16,6 +16,8 @@ class SellpostController extends Controller
             'product_price' => 'required|numeric',
             'product_stock' => 'required|numeric',
             'category_id' => 'required',
+            'phone'=>'regex:/^\\+?[1-9][0-9]{7,14}$/',
+
 //            'image'=>'required|mimes:jpeg,jpg,png,gif'
             'image'=>'required'
         ]);
@@ -101,6 +103,7 @@ class SellpostController extends Controller
                 ]);
                 return back();
             }
+            
         }
     
 

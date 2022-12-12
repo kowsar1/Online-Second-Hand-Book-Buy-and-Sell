@@ -44,9 +44,20 @@
             <td>{{$data->status}}</td>
             <td>{{$data->stock}}</td>
             <td>
-                <a href="{{route('book.view',$data->id)}}" class="btn btn-primary">View</a>
-                <a href="{{route('book.edit',$data->id)}}" class="btn btn-info">Edit</a>
-                <a href="{{route('book.delete',$data->id)}}" class="btn btn-danger">Delete</a>
+            <div class="d-flex flex-row ">
+          <a href="{{route('category.view',$data->id)}}" aria-expanded="false">
+            <img style="width: 40px; height: 40px" class="m-2" src="{{url('/upload/view.png')}}" alt="">
+
+          </a>
+          <a href="{{route('category.edit',$data->id)}}" aria-expanded="false">
+            <img style="width: 40px; height: 40px" class="m-2" src="{{url('/upload/edit.png')}}" alt="">
+
+          </a>
+          <a href="{{route('category.delete',$data->id)}}" aria-expanded="false">
+            <img style="width: 40px; height: 40px" class="m-2" src="{{url('/upload/delete.png')}}" alt="">
+
+          </a>
+        </div>
             </td>
         </tr>
         @endforeach
