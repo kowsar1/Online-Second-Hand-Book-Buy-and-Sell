@@ -1,6 +1,6 @@
 <nav class="sidebar">
         <div class="logo d-flex justify-content-between">
-         <a href="{{route('home')}}"  class="btn btn-info">  <h6>Second hand book </br>Buying and Selling </h6></a>
+         <a href="{{route('home')}}"  class="btn btn-primary">  <h6 class="btn btn-info">Second Hand book </br>Buying and Selling </h6></a>
             <a href="index.html"><img src="img/logo.png" alt=""></a>
             <div class="sidebar_close_icon d-lg-none">
                 <i class="ti-close"></i>
@@ -45,7 +45,7 @@
             </li>
             <li class="">
                 <a  href="{{route('about')}}" aria-expanded="false">
-                    <img src="img/menu-icon/5.svg" alt="">
+                <img src="{{url('/upload/about.png')}}" alt="">
                     <span>About</span>
                 </a>
                 
@@ -53,7 +53,7 @@
             
             <li class="">
                 <a  href="{{route('report')}}" aria-expanded="false">
-                    <img src="img/menu-icon/5.svg" alt="">
+                <img src="{{url('/upload/report.png')}}" alt="">
                     <span>Report</span>
                 </a>
                 

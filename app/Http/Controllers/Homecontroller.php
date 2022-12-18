@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Sellpost;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class Homecontroller extends Controller
 {
@@ -30,11 +31,28 @@ class Homecontroller extends Controller
     {
         // dd($request->all());
 
-        $startData=Carbon::createFromFormat('Y-m-d',$request->created_at);
-        $endDate=Carbon::createFromFormat('Y-m-d',$request->sell_to);
+        $validator = Validator::make($request->all(), [
+            'created_at'    => 'required|date',
+            'sell_to'      => 'required|date|after:created_at',
+        ]);
 
-        $searchResult=Sellpost::whereBetween('created_at',[$startData,$endDate])->get();
-        return view('backend.page.reportganerate',compact('searchResult')); 
+        if($validator->fails())
+        {
+//            notify()->error($validator->getMessageBag());
+            notify()->error('From date and to date required and to should greater then from date.');
+            return redirect()->back();
+        }
+
+
+
+       $from=$request->created_at;
+       $to=$request->sell_to;
+
+
+//       $status=$request->status;
+
+        $searchResult=Sellpost::whereBetween('created_at', [$from, $to])->get();
+        return view('backend.page.report',compact('searchResult')); 
 
     }
 }

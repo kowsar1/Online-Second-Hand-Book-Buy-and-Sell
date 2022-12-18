@@ -39,6 +39,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/profile/update', [Websitecontroller::class, 'update'])->name('user.update');
     
     Route::post('/sellpost', [SellpostController::class, 'create'])->name('sellpost.create');
+    Route::get('/viewsellpost', [SellpostController::class, 'view'])->name('sellpost.view');
+    Route::get('/Rejectsellpost/{sell_id}', [SellpostController::class, 'delete'])->name('sellpost.delete');
+    Route::get('/Approved/{sell_id}', [SellpostController::class, 'update'])->name('sellpost.update');
+    Route::get('/hold/{sell_id}', [SellpostController::class, 'hold'])->name('sellpost.hold');
+    Route::get('/Sell-book/{sell_id}', [SellpostController::class, 'sell_book'])->name('sell.book');
 
    
 });
@@ -64,7 +69,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'kowsar'], function () {
         Route::put('/books/update/{book_id}', [Bookscontroller::class, 'update'])->name('book.update');
 
         Route::get('/report', [Homecontroller::class, 'report'])->name('report');
-        Route::post('/generatereport', [Homecontroller::class, 'generatereport'])->name('generatereport');
+        Route::get('/generatereport', [Homecontroller::class, 'generatereport'])->name('generatereport');
 
         Route::get('/category', [CategoryController::class, 'category'])->name('category');
         Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
@@ -74,10 +79,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'kowsar'], function () {
         Route::get('/category/edit/{product_id}', [CategoryController::class, 'edit'])->name('category.edit');
         Route::put('/category/update/{product_id}', [CategoryController::class, 'update'])->name('category.update');
 
-        Route::get('/viewsellpost', [SellpostController::class, 'view'])->name('sellpost.view');
-        Route::get('/Rejectsellpost/{sell_id}', [SellpostController::class, 'delete'])->name('sellpost.delete');
-        Route::get('/Approved/{sell_id}', [SellpostController::class, 'update'])->name('sellpost.update');
-        Route::get('/hold/{sell_id}', [SellpostController::class, 'hold'])->name('sellpost.hold');
-        Route::get('/Sell-book/{sell_id}', [SellpostController::class, 'sell_book'])->name('sell.book');
+       
     });
 });

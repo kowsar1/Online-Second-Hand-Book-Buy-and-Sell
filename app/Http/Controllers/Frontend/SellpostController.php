@@ -42,6 +42,7 @@ class SellpostController extends Controller
             'description' => $request->description,
             'phone' => $request->phone,
             'location' => $request->location,
+            'User_name'=>auth()->user()->name
         ]);
         notify()->success('Book create  successfully, Waiting for Admin Approval');
 

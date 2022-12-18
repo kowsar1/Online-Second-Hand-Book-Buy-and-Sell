@@ -126,13 +126,13 @@
                                 @csrf
 
                                 <div class="form-group">
-                                    <label for="name">Enter Product Name</label>
-                                    <input required name="product_name" type="text" class="form-control" id="name" placeholder="Enter Product Name">
+                                    <label for="name">Enter Book Name</label>
+                                    <input required name="product_name" type="text" class="form-control" id="name" placeholder="Enter Book Name">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="price">Enter Product Price</label>
-                                    <input required name="product_price" type="number" class="form-control" id="price" placeholder="Enter Product Price">
+                                    <label for="price">Enter Book Price</label>
+                                    <input required name="product_price" type="number" class="form-control" id="price" placeholder="Enter Book Price">
                                 </div>
 
                                 <div class="form-group">

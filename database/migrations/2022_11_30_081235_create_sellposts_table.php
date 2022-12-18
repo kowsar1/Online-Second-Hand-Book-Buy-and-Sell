@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('category_id')->constrained('categories');
             $table->string('name',100);
+            $table->string('User_name',100);
             $table->string('user_id',100);
             $table->string('image')->nullable();
             $table->integer('stock')->default(0);
