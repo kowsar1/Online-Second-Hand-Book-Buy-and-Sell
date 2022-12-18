@@ -38,7 +38,7 @@ class Homecontroller extends Controller
 
         if($validator->fails())
         {
-//            notify()->error($validator->getMessageBag());
+        //    notify()->error($validator->getMessageBag());
             notify()->error('From date and to date required and to should greater then from date.');
             return redirect()->back();
         }
