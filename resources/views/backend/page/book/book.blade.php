@@ -45,15 +45,15 @@
             <td>{{$data->stock}}</td>
             <td>
             <div class="d-flex flex-row ">
-          <a href="{{route('category.view',$data->id)}}" aria-expanded="false">
+          <a href="{{route('book.view',$data->id)}}" aria-expanded="false">
             <img style="width: 40px; height: 40px" class="m-2" src="{{url('/upload/view.png')}}" alt="">
 
           </a>
-          <a href="{{route('category.edit',$data->id)}}" aria-expanded="false">
+          <a href="{{route('book.edit',$data->id)}}" aria-expanded="false">
             <img style="width: 40px; height: 40px" class="m-2" src="{{url('/upload/edit.png')}}" alt="">
 
           </a>
-          <a href="{{route('category.delete',$data->id)}}" aria-expanded="false">
+          <a href="{{route('book.delete',$data->id)}}" aria-expanded="false">
             <img style="width: 40px; height: 40px" class="m-2" src="{{url('/upload/delete.png')}}" alt="">
 
           </a>

@@ -1,7 +1,10 @@
 @extends('frontend.master')
 @section('content')
 
-<h1 class="btn btn-primary">Book Details</h1>
+<div class="d-flex justify-center ">
+	<h1></h1>
+	<h1 class="btn btn-primary ">Book Details</h1>
+</div>
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>

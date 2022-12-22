@@ -55,6 +55,7 @@
                 <th scope="col">Description</th>
                 <th scope="col">Category</th>
                 <th scope="col">Sold Product</th>
+                <th scope="col">Status</th>
                 <th scope="col">Image</th>
                 <th scope="col">Sell</th>
             </tr>
@@ -71,10 +72,12 @@
                 <td>{{$sell->description}}</td>
                 <td>{{$sell->category->name}}</td>
                 <td>{{$sell->decressed_stock}}</td>
+                <td>{{$sell->status}}</td>
                 <td>
 
                     <img width="100px" style="border-radius: 10px" src="{{url('/uploads/'.$sell->image)}}" alt="product_image">
                 </td>
+
                 <td>
                     @if($sell->stock==0)
                               <p>Out of Stock</p>

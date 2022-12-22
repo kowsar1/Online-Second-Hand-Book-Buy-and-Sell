@@ -34,17 +34,9 @@
                         <a href="{{route('webhome')}}" class="nav-item nav-link active">Home</a>
                         <a href="#Book" class="nav-item nav-link">Book</a>
 
-                        <a href="#" class="nav-item nav-link">Contact</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
-                    <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-                        <a href="" class="btn px-0">
-                            <i class="fas fa-heart text-primary"></i>
-                            <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
-                        </a>
-                        <a href="" class="btn px-0 ml-3">
-                            <i class="fas fa-shopping-cart text-primary"></i>
-                            <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
-                        </a>
+                 
                     </div>
                 </div>
             </nav>
@@ -69,7 +61,7 @@
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Read Book</h1>
-                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Book is the best Friend</p>
                                 <!-- <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a> -->
                             </div>
                         </div>
@@ -79,7 +71,7 @@
                         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                             <div class="p-3" style="max-width: 700px;">
                                 <h1 class="display-4 text-white mb-3 animate__animated animate__fadeInDown">Buy from here</h1>
-                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">Lorem rebum magna amet lorem magna erat diam stet. Sadips duo stet amet amet ndiam elitr ipsum diam</p>
+                                <p class="mx-md-5 px-5 animate__animated animate__bounceIn">What ever you want</p>
                                 <!-- <a class="btn btn-outline-light py-2 px-4 mt-3 animate__animated animate__fadeInUp" href="#">Shop Now</a> -->
                             </div>
                         </div>
@@ -104,7 +96,11 @@
                     <img class="position-absolute w-100 h-100" src="{{url('/upload/image.jpg')}}" style="object-fit: cover;">
 
                     <div class="offer-text">
+                       @auth
                         <a href="" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal"> <big> Post Your Book</big></a>
+                        @else
+                        <p class="btn btn-primary"> Login to Post</p>
+                        @endauth
                     </div>
                 </div>
             </div>
@@ -259,7 +255,7 @@
 <!-- Products Start 
     <div class="container-fluid pt-5 pb-3">
 
-        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Books</span></h2>
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Book Shop</span></h2>
         <div class="container mt-100">
 
 
