@@ -37,7 +37,6 @@
 						  <div class="tab-pane active" id="pic-1"><img src={{url('/uploads/'.$test->image)}} /></div>
 						  <div class="action">
 							<a href="{{route('webhome')}}" class="add-to-cart btn btn-default" type="button" >Back</a>
-							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 
 						</div>
 						</div>
@@ -49,7 +48,7 @@
 						
 						<div >
 							<div class="mt-5">
-							<p class="like btn btn-default">Price: {{$test->price}}BDT</p>
+							<p class="like btn btn-default">Price: BDT {{$test->price}} </p>
 						    </div>
 							<div class="mt-5">
 							<p class="like btn btn-default">Owner Number: {{$test->phone}}</p>
