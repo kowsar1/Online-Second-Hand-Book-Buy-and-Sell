@@ -22,9 +22,9 @@
         </thead>
         <tbody>
 
-        @foreach($post  as $test)
+        @foreach($post  as $key=>$test)
         <tr>
-            <th scope="row">{{$test->id}}</th>
+            <th scope="row">{{$key+1}}</th>
             <td>
 
                 <img width="100px" style="border-radius: 10px" src="{{url('/uploads/'.$test->image)}}" alt="product_image">

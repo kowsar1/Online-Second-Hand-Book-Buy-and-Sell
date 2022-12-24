@@ -24,9 +24,8 @@ class Websitecontroller extends Controller
         $request->validate([
 
             'name' => 'required',
-            'email' => 'required |email','required|unique:users,email',
+            'email' => 'required |unique:users,email',
             'password' => 'required',
-            'mobile' =>'required',
             'address' => 'required',
             'mobile' => 'regex:/^\\+?[1-9][0-9]{7,14}$/'
 

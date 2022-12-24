@@ -82,7 +82,7 @@
                     @if($sell->stock==0)
                               <p>Out of Stock</p>
                     @else
-                    <div class="mt-5">
+                    <div class="mt-1">
                         <a href="{{route('sell.book',$sell->id)}}" class="btn btn-primary">Sell</a>
                         @endif
                 </td>
