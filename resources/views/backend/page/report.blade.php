@@ -3,7 +3,6 @@
 
 @section('content')
 
-<h1 class="btn btn-primary">Create Report Form</h1>
 <form action="{{route('generatereport')}}">
 
 
@@ -58,14 +57,16 @@
 </div>
 <div  class="row">
     <div class="col-md-4">
+
+    <button onclick="printDiv('orderReport')" class="btn btn-success">Print</button>
+
+
     </div>
     <div class="col-md-4">
         
-        <button onclick="printDiv('orderReport')" class="btn btn-success">Print</button>
 
         </div>
         <div class="col-md-4">
-
        
     </div>
 

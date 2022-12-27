@@ -17,6 +17,7 @@
             <th scope="col">Description</th>
             <th scope="col">Status</th>
             <th scope="col">Stock</th>
+            <th scope="col">Sold Book</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
@@ -34,11 +35,12 @@
             <td>{{$test->category->name}}</td>
             <td>{{$test->description}}</td>
             <td>{{$test->status}}</td>
+            <td>{{$test->decressed_stock}}</td>
             <td>{{$test->stock}}</td>
             <td>
                 <a  href="{{route('sellpost.update',$test->id)}}" class="btn btn-primary">Accept</a>
                 <a href="{{route('sellpost.delete',$test->id)}}" class="btn btn-danger">Reject</a>
-                <a href="{{route('sellpost.hold',$test->id)}}" class="btn btn-danger">Hold</a>
+                <a href="{{route('sellpost.hold',$test->id)}}" class="btn btn-warning">Hold</a>
             </td>
         </tr>
         @endforeach
