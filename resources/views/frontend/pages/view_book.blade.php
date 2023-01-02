@@ -31,7 +31,7 @@
 		<div class="card">
 			<div class="container-fliud">
 				<div class="wrapper row">
-					<div class="preview col-md-6">
+				<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
 						  <div class="tab-pane active" id="pic-1"><img src={{url('/uploads/'.$test->image)}} /></div>
@@ -43,8 +43,10 @@
 						
 						
 					</div>
+					
 					<div class="details col-md-6">
 						<h3 class="product-title">{{$test->name}}</h3>
+						
 						
 						<div >
 							<div class="mt-5">
@@ -71,6 +73,7 @@
 						
 						
 					</div>
+					
 				</div>
 			</div>
 		</div>
