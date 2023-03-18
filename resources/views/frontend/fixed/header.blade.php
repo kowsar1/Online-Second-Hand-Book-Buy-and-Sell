@@ -5,7 +5,13 @@
        <div class="d-inline-flex align-items-center h-100">
          <a class="text-body mr-3" href="#about">About Us</a>
          <a class="text-body mr-3" href="#contact">Contact</a>
-         <a class="text-body mr-3" href="#contact">Help</a>
+         <a class="text-body mr-3" href="#contact">{{__("Help")}}</a>
+         <!-- <select class="text-body mr-3" class="form-control" name="language" id="" onchange="location = this.value;">
+                    <option @if(session()->get('loc')=='en') selected @endif  value="">EN</option>
+                    <option  @if(session()->get('loc')=='bn') selected @endif  value="">BN</option>
+                     <option  @if(session()->get('loc')=='ko') selected @endif  value=" ">KO</option> -->
+
+                <!-- </select>  -->
        </div>
      </div>
      <div class="col-lg-6 text-center text-lg-right">
@@ -150,7 +156,7 @@
          </div>
        </form>
      </div>
-     
+
    </div>
  </div>
  <!-- Topbar End -->
